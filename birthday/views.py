@@ -8,12 +8,6 @@ from .models import Birthday
 from .utils import calculate_birthday_countdown
 
 
-class HomePage(TemplateView):
-    # В атрибуте template_name обязательно указывается имя шаблона,
-    # на основе которого будет создана возвращаемая страница.
-    template_name = 'pages/index.html' 
-
-
 class BirthdayListView(ListView):
     model = Birthday
     ordering = 'id'
